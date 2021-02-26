@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap" rel="stylesheet"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  
+  <link rel="stylesheet" href="css/main.css">
+  
+  <title>Pod request access landing page</title>
+</head>
+<body>
+  <div class="container">
+  <div class="wrapper">
+    <h1><span>Publish your podcasts </span>everywhere.</h1>
+    <div class="text-wrapper">
+    <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
+      Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+    </div>
+    <div class="logos-mobile">
+      <img src="/assets/desktop/spotify.svg" alt="spotify">
+      <img src="/assets/desktop/apple-podcast.svg" alt="apple">
+      <img src="/assets/desktop/google-podcasts.svg" alt="google-podcasts">
+      <img src="/assets/desktop/pocket-casts.svg" alt="pocket-casts">
+    </div>
+    <div class="input-wrapper">
+      <input type="text" class="email" placeholder="Email address">
+    <div class="btn disable-select">Request Access</div>
+  </div>
+  <div class="btn disable-select">Request Access</div>
+  <div class="valid"></div>
+    <div class="logos">
+      <img src="/assets/desktop/spotify.svg" alt="spotify">
+      <img src="/assets/desktop/apple-podcast.svg" alt="apple">
+      <img src="/assets/desktop/google-podcasts.svg" alt="google-podcasts">
+      <img src="/assets/desktop/pocket-casts.svg" alt="pocket-casts">
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+<script>
+  const emailEl = document.querySelector('.email')
+  const btnEl = document.querySelectorAll('.btn')
+  const validEl = document.querySelector('.valid')
+
+  function validateEmail(email) 
+    {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
+  btnEl.forEach(element => {
+    element.addEventListener('click', e => {
+    if (validateEmail(emailEl.value)) {
+      validEl.style.color = '#ffffff'
+      validEl.textContent = 'Email sent'
+    } else {
+      validEl.style.color = '#ff0000';
+      validEl.textContent = 'Oops! Please check your email'
+    }
+    setTimeout(function(){ validEl.textContent = '' }, 3000);
+
+  })
+  });
+
+</script>

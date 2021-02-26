@@ -1,0 +1,35 @@
+:root {
+    --clr-background: #121725;
+    --clr-green: rgb(84, 230, 175);
+    --clr-grey-dark: #2C344B;
+    --clr-dark: #121725;
+    --clr-white: #FFFFFF;
+    --clr-grey-light: #5A668A;
+    --clr-grey: #C2CBE5;
+
+    font-family: 'Chivo', sans-serif;
+
+    --fs-400: 1.125rem;
+    --fs-title: 3.25rem;
+
+    --lh-400: 1.75rem;
+    --lh-title: 3.875rem;
+
+    @media only screen and (max-width: 669px) {
+        --fs-400: 1rem;
+        --fs-title: 1.7rem;
+
+        --lh-400: 1.5rem;
+        --lh-title: 2.2rem;
+    }
+
+    @media only screen and (min-width: 1440px) {
+            --fs-400: 1.25vw;
+            --fs-title: 3.6111111111111107vw;
+    
+            --lh-400: 1.9444444444444444vw;
+            --lh-title: 4.305555555555555vw;
+    }
+}
+
+
