@@ -141,6 +141,7 @@ body {
     background-color: unset;
     text-align: center;
     padding: 0 1.2rem;
+    z-index: 10;
   }
 }
 
