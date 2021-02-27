@@ -203,6 +203,7 @@ p {
   background: none;
   border: none;
   outline: none;
+  z-index: 10;
 }
 
 .btn {
